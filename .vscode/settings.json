@@ -3,6 +3,7 @@
         "iostream": "cpp",
         "xstring": "cpp",
         "xiosbase": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "queue": "cpp"
     }
 }
