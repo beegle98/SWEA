@@ -11,15 +11,17 @@ typedef pair<ll,ll> pll;
 int main(){
     FASTIO
     
-    int n,s[101],v,sum=0;
-    cin >> n;
-    for(int i=0;i<n;i++){
-        cin >> s[i];
+    int n,m,s[101];
+    cin >> n >> m;
+    for(int i=1;i<=n;i++) s[i]=0;
+    for(int i=0;i<m;i++){
+        int a,b,k; cin >> a >> b>> k;
+        for(int j=a;j<=b;j++){
+            s[j]=k;
+        }
     }
-    cin >> v;
-    for(int i=0;i<n;i++){
-        if(s[i]==v) sum++;
+    for(int i=1;i<=n;i++){
+        cout << s[i] << ' ';
     }
-    cout << sum << '\n';
     return 0;
 }
