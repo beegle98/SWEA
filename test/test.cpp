@@ -10,18 +10,17 @@ typedef pair<ll,ll> pll;
 
 int main(){
     FASTIO
-    
-    int n,m,s[101];
-    cin >> n >> m;
-    for(int i=1;i<=n;i++) s[i]=0;
-    for(int i=0;i<m;i++){
-        int a,b,k; cin >> a >> b>> k;
-        for(int j=a;j<=b;j++){
-            s[j]=k;
-        }
+    vector<string> s;
+    for(int i=0;i<5;i++){
+        string a;
+        cin >> a;
+        s.push_back(a);
     }
-    for(int i=1;i<=n;i++){
-        cout << s[i] << ' ';
+    for(int i=0;i<15;i++){
+        for(int j=0;j<5;j++){
+            if(s[j].size()<i+1) continue;
+            cout << s[j][i];
+        }
     }
     return 0;
 }
