@@ -12,12 +12,17 @@ int s[31];
 int main(){
     FASTIO
     
-    for(int i=1;i<=28;i++){
-        int x; cin >> x;
-        s[x]=1;
+    int n,m; cin >> n >> m;
+    vi s;
+    for(int i=1;i<=n;i++){
+        s.push_back(i);
     }
-    for(int i=1;i<=30;i++){
-        if(s[i]==0) cout << i << '\n';
+    for(int i=0;i<m;i++){
+        int a,b; cin >> a >> b;
+        reverse(s.begin()+a-1,s.begin()+b);
+    }
+    for(int i=0;i<n;i++){
+        cout << s[i] << ' ';
     }
     return 0;
 }
