@@ -8,17 +8,16 @@ typedef vector<int> vi;
 typedef pair<int,int> pi;
 typedef pair<ll,ll> pll;
 
+int s[31];
 int main(){
     FASTIO
-    string s;
-    cin >> s;
-    int len=s.size();
-    for(int i=0;i<len;i++){
-        if(s[i]!=s[len-1-i]){
-            cout << "0\n";
-            return 0;
-        }
+    
+    for(int i=1;i<=28;i++){
+        int x; cin >> x;
+        s[x]=1;
     }
-    cout << "1\n";
+    for(int i=1;i<=30;i++){
+        if(s[i]==0) cout << i << '\n';
+    }
     return 0;
 }
